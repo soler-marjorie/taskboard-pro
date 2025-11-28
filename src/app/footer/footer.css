@@ -9,7 +9,7 @@ footer {
 }
 
 .footer-link:hover {
-  color: #667eea !important;
+  color: #ffc107 !important;
   padding-left: 5px;
 }
 
@@ -20,7 +20,7 @@ footer {
 }
 
 .social-links a:hover {
-  color: #667eea !important;
+  color: #ffc107 !important;
   transform: translateY(-3px);
 }
 
@@ -36,17 +36,20 @@ footer {
 
 .input-group .form-control:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: #667eea;
+  border-color: #ffc107;
   color: white;
-  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
 }
 
-.input-group .btn-primary {
-  background-color: #667eea;
-  border-color: #667eea;
+.input-group .btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #333;
+  font-weight: 600;
 }
 
-.input-group .btn-primary:hover {
-  background-color: #764ba2;
-  border-color: #764ba2;
+.input-group .btn-warning:hover {
+  background-color: #ff9800;
+  border-color: #ff9800;
 }
+

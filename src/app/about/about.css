@@ -1,5 +1,5 @@
 .about-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
   color: white;
 }
 
@@ -19,7 +19,7 @@
 .value-card:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
-  border-color: #667eea;
+  border-color: #ffc107;
 }
 
 .value-icon {
@@ -35,3 +35,4 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
   transform: translateY(-5px);
 }
+

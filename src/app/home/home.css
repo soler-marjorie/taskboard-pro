@@ -1,5 +1,5 @@
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
   color: white;
   min-height: 500px;
   display: flex;
@@ -17,7 +17,7 @@
   transition: all 0.3s ease;
 }
 
-.hero-section .btn-light:hover {
+.hero-section .btn-warning:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -40,7 +40,88 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
 }
 
-.badge {
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
+
+.mockup-phone {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-screen {
+  width: 300px;
+  height: 600px;
+  background: white;
+  border: 12px solid #333;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.phone-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 25px;
+  background: #333;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.screen-content {
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+.screen-header {
+  background: linear-gradient(135deg, #d4a574, #8b6f47);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.book-list {
+  padding: 10px;
+}
+
+.book-item {
+  padding: 15px;
+  margin: 8px 0;
+  background: #f8f9fa;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
