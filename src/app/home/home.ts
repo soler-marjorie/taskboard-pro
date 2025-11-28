@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Fonctionnalites, Fonctionnalite } from '../core/services/fonctionnalites';
+import { Fonctionnalites, Fonctionnalite } from '../core/services/home/fonctionnalites';
 
 @Component({
   selector: 'app-home',
