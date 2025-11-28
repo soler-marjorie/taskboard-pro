@@ -1,6 +1,6 @@
 <div class="container-fluid hero-section py-5">
   <div class="container text-center">
-    <h1 class="display-3 fw-bold mb-4">Bienvenu sur BookTracker</h1>
+    <h1 class="display-3 fw-bold mb-4">Bienvenu sur BiblioQuest</h1>
     <p class="lead fs-5 mb-5 text-white-50">L'application mobile pour gérer votre bibliothèque personnelle</p>
     <button class="btn btn-warning btn-lg me-3 fw-bold text-dark">Télécharger l'app</button>
     <button class="btn btn-outline-light btn-lg fw-bold">Découvrir plus</button>
@@ -11,30 +11,12 @@
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Fonctionnalités principales</h2>
     <div class="row g-4">
-      <div class="col-md-4">
+      <div class="col-md-4" *ngFor="let feature of fonctionnalites">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body text-center">
-            <div class="feature-icon mb-3">📱</div>
-            <h5 class="card-title fw-bold">Interface Mobile</h5>
-            <p class="card-text text-muted">Une expérience fluide et intuitive adaptée à votre téléphone pour gérer vos livres en déplacement.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="feature-icon mb-3">📚</div>
-            <h5 class="card-title fw-bold">Catalogage Simple</h5>
-            <p class="card-text text-muted">Ajoutez vos livres facilement avec scannage de code-barres, recherche par titre ou auteur.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="feature-icon mb-3">📊</div>
-            <h5 class="card-title fw-bold">Suivi de Lecture</h5>
-            <p class="card-text text-muted">Suivez votre progression de lecture, ajoutez des notes et des évaluations pour chaque livre.</p>
+            <div class="feature-icon mb-3">{{ feature.icon }}</div>
+            <h5 class="card-title fw-bold">{{ feature.titre }}</h5>
+            <p class="card-text text-muted">{{ feature.description }}</p>
           </div>
         </div>
       </div>
