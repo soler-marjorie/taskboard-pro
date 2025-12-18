@@ -1,0 +1,6 @@
+<div class="task-edit">
+    <h3>Éditer la tâche</h3>
+    <input #editInput [value]="title" />
+    <button (click)="save(editInput.value)">Sauvegarder</button>
+    <button (click)="cancel()">Annuler</button>
+</div>
