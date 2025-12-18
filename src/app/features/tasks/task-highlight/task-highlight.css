@@ -1,0 +1,49 @@
+/* Styled highlight box (non-invasive) */
+.task-highlight {
+	background: linear-gradient(90deg, #ffffff, #fbfbfb);
+	border: 1px solid #e9e6df;
+	padding: 1rem 1.1rem;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 6px 26px rgba(0,0,0,0.06);
+	animation: fadeInUp 250ms ease both;
+}
+
+.task-highlight h3 {
+	margin: 0 0 0.4rem 0;
+	font-weight: 700;
+	color: #3b2f1b;
+}
+
+.task-highlight p {
+	margin: 0;
+	font-weight: 600;
+	color: #343434;
+}
+
+@keyframes fadeInUp {
+	from { transform: translateY(6px); opacity: 0 }
+	to   { transform: translateY(0); opacity: 1 }
+}
+
+/* Add subtle badge for the title */
+.task-highlight h3::after {
+	content: '';
+	display: inline-block;
+	width: 40px;
+	height: 6px;
+	margin-left: 10px;
+	vertical-align: middle;
+	background: linear-gradient(90deg,#d4a574,#8b6f47);
+	border-radius: 4px;
+}
+
+.task-highlight {
+	transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.task-highlight:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+

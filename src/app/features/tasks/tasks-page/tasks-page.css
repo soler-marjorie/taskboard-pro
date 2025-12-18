@@ -1,0 +1,395 @@
+.bg-color {
+  background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.bg-color h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.bg-color h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.bg-color ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.bg-color li {
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #ffc107;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.bg-color li:hover {
+  /* Make the parent hover much subtler so it doesn't wash out buttons */
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.actions-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+}
+
+.btn-add:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 193, 7, 0.3);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Enhanced list styling */
+ul {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.6rem;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  border-left: 4px solid rgba(255,193,7,0.95);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Buttons in the list */
+.btn-outline-primary {
+  color: #6c4a0d;
+  border-color: rgba(108,74,13,0.15);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background: linear-gradient(90deg,#d4a574,#8b6f47);
+  border-color: transparent;
+}
+
+.btn-outline-danger {
+  color: #7a1b1b;
+  border-color: rgba(122,27,27,0.12);
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background: #ff6b6b;
+  border-color: transparent;
+}
+
+/* Apply Bootstrap-like styles to buttons without changing HTML
+   - First button in list items becomes outline-primary style
+   - Second button becomes outline-danger style
+   - The add button (input + button) becomes a warning/primary CTA
+*/
+.bg-color li button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.bg-color li button:hover {
+  transform: translateY(-2px);
+}
+
+/* Mettre en avant -> outline primary look */
+.bg-color li button:nth-of-type(1) {
+  color: var(--muted);
+  border-color: rgba(108,74,13,0.12);
+  background: transparent;
+}
+.bg-color li button:nth-of-type(1):hover {
+  color: #fff;
+  background: linear-gradient(90deg,var(--biblio-start),var(--biblio-end));
+  border-color: transparent;
+}
+
+/* Supprimer -> outline danger look */
+.bg-color li button:nth-of-type(2) {
+  color: #7a1b1b;
+  border-color: rgba(122,27,27,0.12);
+}
+.bg-color li button:nth-of-type(2):hover {
+  color: #fff;
+  background: #ff6b6b;
+  border-color: transparent;
+}
+
+/* Fallback and broader selectors so buttons aren't gray if no .bg-color wrapper exists */
+ul li > button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border: 1px solid rgba(0,0,0,0.06);
+  color: var(--muted);
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+ul li > button:first-of-type {
+  color: var(--muted);
+  border-color: rgba(108,74,13,0.12);
+}
+ul li > button:first-of-type:hover {
+  color: #fff;
+  background: linear-gradient(90deg,var(--biblio-start),var(--biblio-end));
+  border-color: transparent;
+}
+
+ul li > button:nth-of-type(2) {
+  color: #7a1b1b;
+  border-color: rgba(122,27,27,0.12);
+}
+ul li > button:nth-of-type(2):hover {
+  color: #fff;
+  background: #ff6b6b;
+  border-color: transparent;
+}
+
+/* Ensure buttons get the proper colored hover state when the whole list item is hovered */
+.bg-color li:hover button,
+ul li:hover > button {
+  transform: translateY(-2px);
+}
+
+.bg-color li:hover button:nth-of-type(1),
+ul li:hover > button:first-of-type {
+  color: #f8dc50;
+  background: linear-gradient(90deg,var(--biblio-start),var(--biblio-end));
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.bg-color li:hover button:nth-of-type(2),
+ul li:hover > button:nth-of-type(2) {
+  color: #fff;
+  background: #ff6b6b;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Add icons via pseudo-elements (CSS-only) */
+ul li > button:first-of-type::before {
+  content: '📌';
+  margin-right: 0.5rem;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+ul li > button:nth-of-type(2)::before {
+  content: '🗑️';
+  margin-right: 0.5rem;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+/* Ensure add button uses CTA style on narrow view if selectors don't match */
+@media (max-width: 480px) {
+  input + button { width: 100%; margin-left: 0; margin-top: 0.6rem; display: block }
+  ul li { flex-direction: column; align-items: flex-start }
+  ul li > button { margin-top: 0.6rem }
+}
+
+/* Add button next to input -> prominent warning CTA */
+input + button {
+  padding: 0.7rem 1.2rem;
+  border-radius: 24px;
+  border: none;
+  color: #222;
+  background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+  box-shadow: 0 8px 22px rgba(255,193,7,0.14);
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 0.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input + button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255,193,7,0.22);
+}
+
+/* Small screens: make buttons stack nicely */
+@media (max-width: 480px) {
+  input + button { width: 100%; margin-left: 0; margin-top: 0.6rem; display: block }
+  .bg-color li { flex-direction: column; align-items: flex-start }
+  .bg-color li button { margin-top: 0.6rem }
+}
+
+/* Input + add button */
+input[placeholder] {
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 0.6rem 0.8rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+button.btn-warning {
+  background: linear-gradient(90deg,#ffc107,#ff9800);
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(255,193,7,0.18);
+  color: #222;
+  font-weight: 600;
+}
+
+/* highlight container fallback spacing */
+div[ng-reflect-name], div[ng-reflect-ng-reflect] {
+  /* no-op - some renderers add attributes, keep placeholder style minimal */
+}
+
+/* make small-screen responsive if present */
+.small-screen {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* Theme variables scoped to tasks page */
+:root {
+  --biblio-start: #d4a574;
+  --biblio-end: #8b6f47;
+  --accent: #ffc107;
+  --accent-dark: #ff9800;
+  --muted: rgba(0,0,0,0.55);
+}
+
+/* Book icon before each list item */
+.list-group-item::before,
+li::before {
+  content: '📚';
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin-right: 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Tweak list appearance to be card-like */
+.list-group-item {
+  border: none;
+  background: transparent;
+  padding: 0.9rem 1rem;
+}
+
+.card .card-body.bg-color {
+  padding: 1.6rem;
+}
+
+.highlight-box {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.highlight-box .task-highlight {
+  width: 100%;
+}
+
+/* Buttons group spacing */
+.btn-group .btn {
+  min-width: 98px;
+}
+
+/* Input + add button responsive */
+.mt-3.d-flex {
+  gap: 0.6rem;
+}
+
+/* Subtle separators */
+.card + .mt-3 {
+  margin-top: 1rem !important;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 992px) {
+  .row.g-4 { gap: 1.25rem }
+}
+
+@media (max-width: 767px) {
+  .col-lg-8, .col-lg-4 { flex: 0 0 100%; max-width: 100%; }
+  .list-group-item::before, li::before { width: 30px; height: 30px; line-height: 30px }
+  .btn-group .btn { min-width: 72px; font-size: 0.85rem }
+}
+
+/* Accent underline for headings */
+.fw-bold::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, var(--biblio-start), var(--biblio-end));
+  border-radius: 3px;
+}
+
+/* Improve placeholder and focus */
+input.form-control:focus {
+  box-shadow: 0 6px 20px rgba(102,126,234,0.06);
+  border-color: var(--biblio-start);
+}

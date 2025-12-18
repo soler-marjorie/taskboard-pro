@@ -3,6 +3,9 @@ import { of, Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import {BehaviorSubject} from 'rxjs';
 
+export type Task = { id: number; title: string };
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -28,4 +31,10 @@ export class Tasks {
     this.task = [...this.task, newTask];
     this.taskSubject.next(this.task)
   }
+
+  deleteTask(id: number) {
+  this.task = this.task.filter(t => t.id !== id);
+  this.taskSubject.next(this.task);
+}
+
 }

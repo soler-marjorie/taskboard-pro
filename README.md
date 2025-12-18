@@ -57,3 +57,23 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# Cours
+
+## Séquence 3 — Lazy Loading & Composants dynamiques
+
+### Lazy Loading
+Le lazy loading permet de charger le code d’une fonctionnalité uniquement quand on visite sa route (ex: /tasks, /about).  
+On utilise `loadChildren` dans `app.routes.ts` pour importer les routes de la feature à la demande.
+
+### Structure features/
+L’application est organisée par fonctionnalités dans `features/` (tasks, about, etc.).  
+Chaque feature contient ses pages/composants et ses propres routes.
+
+### Composant dynamique
+Un composant dynamique n’est pas présent dans le HTML au départ. Il est créé à la volée via TypeScript.
+
+### ViewContainerRef + createComponent()
+On récupère une zone d’injection avec `@ViewChild(..., { read: ViewContainerRef })`.  
+Puis on vide l’ancien contenu avec `container.clear()` et on crée le composant avec `container.createComponent(...)`.  
+On peut ensuite passer des données via les inputs (ex: `ref.instance.title = task.title`).
