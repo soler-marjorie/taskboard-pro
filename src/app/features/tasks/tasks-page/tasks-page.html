@@ -3,7 +3,7 @@
 <ul>
     @for (t of tasks; track t.id) {
     <li>
-        {{ t.title }}
+        <span [innerHTML]="t.title"></span>
         <button type="button" (click)="highlight(t)">
         Mettre en avant
         </button>
